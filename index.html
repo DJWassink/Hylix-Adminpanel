@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hylix Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Material design icons CSS -->
+    <link href="bower_components/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Nano scrollbars -->
+    <link href="bower_components/nanoscroller/bin/css/nanoscroller.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="stylesheets/progress.css" rel="stylesheet">
+    <link href="stylesheets/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="progress hidden">
+        <div class="indeterminate"></div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Hylix admin</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <aside class="navbar-default" role="navigation">
+        <div class="nano">
+            <div class="sidebar-nav nano-content">
+                <ul class="nav">
+                    <li>
+                        <a href="pages/dashboard.html"><i class="md-dashboard"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="pages/urls.html"><i class="md-pages"></i> <span>Urls</span></a>
+                    </li>
+                    <li>
+                        <a href="pages/statistics.html"><i class="md-timer"></i> <span>Statistics</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="md-equalizer"></i> <span>Charts</span><i class="mdi-navigation-chevron-left arrow"></i></a>
+                        <ul class="nav">
+                            <li>
+                                <a href="flot.html"><i class="md-equalizer"></i> <span>Flot Charts</span></a>
+                            </li>
+                            <li>
+                                <a href="morris.html"><i class="md-equalizer"></i> <span>Morris.js Charts</span></a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </aside>
+
+    <main>
+        <div class="nano">
+            <div id="page-content" class="nano-content">
+            </div>
+        </div>
+    </main>
+
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="bower_components/raphael/raphael-min.js"></script>
+    <script src="bower_components/morrisjs/morris.min.js"></script>
+
+    <!-- Material design js files -->
+    <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+
+    <!-- Nano scrollbars -->
+    <script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
+
+    <!-- Own js file -->
+    <script src="javascripts/main.js"></script>
+
+</body>
+
+</html>
