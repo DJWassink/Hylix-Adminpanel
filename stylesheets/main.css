@@ -27,7 +27,6 @@ aside {
 	overflow-x:hidden;
 	overflow-y:auto;
 	transition: .3s ease-in-out width;
-  box-shadow: 0 1px 6px rgba(0,0,0,.12);
 }
 aside a.active {
   background: #eee;

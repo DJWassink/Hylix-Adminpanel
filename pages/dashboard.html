@@ -1,5 +1,4 @@
 <h1 class="page-header">Dashboard</h1>
-
 <div class="row">
     <div class="col-lg-3 col-md-6">
         <div class="panel panel-primary">
@@ -9,7 +8,7 @@
                         <i class="md-settings-input-composite md-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <h2>26</h2>
+                        <h2 id="active-domains">0</h2>
                         <div>Active domain urls</div>
                     </div>
                 </div>
@@ -31,7 +30,7 @@
                         <i class="md-settings-ethernet md-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <h2>12</h2>
+                        <h2 id="total-searches">0</h2>
                         <div>Tasks running</div>
                     </div>
                 </div>
@@ -53,7 +52,7 @@
                         <i class="md-search md-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <h2>124</h2>
+                        <h2 id="today-searches">0</h2>
                         <div>Searches today</div>
                     </div>
                 </div>
@@ -75,7 +74,7 @@
                         <i class="md-content-copy md-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <h2>812</h2>
+                        <h2 id="total-pages">0</h2>
                         <div>Pages in history</div>
                     </div>
                 </div>
@@ -91,7 +90,6 @@
     </div>
 </div>
 <!-- /.row -->
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <i class="fa fa-bar-chart-o fa-fw"></i> Searches over time
@@ -102,47 +100,128 @@
     </div>
     <!-- /.panel-body -->
 </div>
-
-
 <script>
-Morris.Area({
-    element: 'morris-area-chart',
-    data: [{
-        period: '2010 Q1',
-        searches: 2647
-    }, {
-        period: '2010 Q2',
-        searches: 2441
-    }, {
-        period: '2010 Q3',
-        searches: 2501
-    }, {
-        period: '2010 Q4',
-        searches: 5689
-    }, {
-        period: '2011 Q1',
-        searches: 2293
-    }, {
-        period: '2011 Q2',
-        searches: 1881
-    }, {
-        period: '2011 Q3',
-        searches: 1588
-    }, {
-        period: '2011 Q4',
-        searches: 5175
-    }, {
-        period: '2012 Q1',
-        searches: 2028
-    }, {
-        period: '2012 Q2',
-        searches: 1791
-    }],
-    xkey: 'period',
-    ykeys: ['searches'],
-    labels: ['Amount of searches'],
-    pointSize: 5,
-    hideHover: 'auto',
-    resize: true
-});
+//Morris char wrapped in a timeout for reloading the page (else viewport is 0x0)
+setTimeout(function() {
+    Morris.Area({
+        element: 'morris-area-chart',
+        data: [{
+            period: '2010 Q1',
+            searches: 2647
+        }, {
+            period: '2010 Q2',
+            searches: 2441
+        }, {
+            period: '2010 Q3',
+            searches: 2501
+        }, {
+            period: '2010 Q4',
+            searches: 4689
+        }, {
+            period: '2011 Q1',
+            searches: 2293
+        }, {
+            period: '2011 Q2',
+            searches: 1881
+        }, {
+            period: '2011 Q3',
+            searches: 1588
+        }, {
+            period: '2011 Q4',
+            searches: 3175
+        }, {
+            period: '2012 Q1',
+            searches: 2028
+        }, {
+            period: '2012 Q2',
+            searches: 1791
+        }, {
+            period: '2012 Q3',
+            searches: 1791
+        }, {
+            period: '2012 Q4',
+            searches: 4687
+        }, {
+            period: '2013 Q1',
+            searches: 2786
+        }, {
+            period: '2013 Q2',
+            searches: 4328
+        }, {
+            period: '2013 Q3',
+            searches: 4568
+        }, {
+            period: '2013 Q4',
+            searches: 3548
+        }, {
+            period: '2014 Q1',
+            searches: 4568
+        }, {
+            period: '2014 Q2',
+            searches: 3548
+        }, {
+            period: '2014 Q3',
+            searches: 2786
+        }, {
+            period: '2014 Q4',
+            searches: 2573
+        }, {
+            period: '2015 Q1',
+            searches: 3786
+        }, {
+            period: '2015 Q2',
+            searches: 4868
+        }, {
+            period: '2015 Q3',
+            searches: 3254
+        }, {
+            period: '2015 Q4',
+            searches: 6548
+        }],
+        xkey: 'period',
+        ykeys: ['searches'],
+        labels: ['Amount of searches'],
+        pointSize: 5,
+        hideHover: 'auto',
+        resize: true
+    });
+}, 0);
+
+        var speed = 1000;
+        var interval = 10;
+        var data = {
+            urls: 834,
+            searches: 138465,
+            searchesToday: 6546,
+            pages: 38435846
+        };
+
+        $('#active-domains').countTo({
+            from: 0,
+            to: data.urls,
+            speed: speed,
+            refreshInterval: interval
+        });
+
+        $('#total-searches').countTo({
+            from: 0,
+            to: data.searches,
+            speed: speed,
+            refreshInterval: interval
+        });
+
+        $('#today-searches').countTo({
+            from: 0,
+            to: data.searchesToday,
+            speed: speed,
+            refreshInterval: interval
+        });
+
+        $('#total-pages').countTo({
+            from: 0,
+            to: data.pages,
+            speed: speed,
+            refreshInterval: interval
+        });
+
 </script>

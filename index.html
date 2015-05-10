@@ -2,49 +2,41 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Hylix Admin</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-
     <!-- Material design icons CSS -->
     <link href="bower_components/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
-
     <!-- Morris Charts CSS -->
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
-
     <!-- Nano scrollbars -->
     <link href="bower_components/nanoscroller/bin/css/nanoscroller.css" rel="stylesheet">
-
+    <!-- SnackbarJS -->
+    <link rel="stylesheet" type="text/css" href="bower_components/snackbarjs/dist/snackbar.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/snackbarjs/themes-css/material.css">
     <!-- Custom CSS -->
-    <link href="stylesheets/progress.css" rel="stylesheet">
-    <link href="stylesheets/main.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="stylesheets/loader.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/edit.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
-    <div class="progress hidden">
-        <div class="indeterminate"></div>
-    </div>
+    <div id="page-loader" class="material-loader" aria-busy="false"></div>
     <nav class="navbar navbar-default">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -70,20 +62,18 @@
             </ul>
         </div>
     </nav>
-
-
-    <aside class="navbar-default" role="navigation">
+    <aside class="navbar-default shadow-z-1" role="navigation">
         <div class="nano">
             <div class="sidebar-nav nano-content">
                 <ul class="nav">
                     <li>
-                        <a href="pages/dashboard.html"><i class="md-dashboard"></i> <span>Dashboard</span></a>
+                        <a href="pages/dashboard.html" class="active"><i class="md-dashboard"></i> <span>Dashboard</span></a>
                     </li>
                     <li>
                         <a href="pages/urls.html"><i class="md-pages"></i> <span>Urls</span></a>
                     </li>
                     <li>
-                        <a href="pages/statistics.html"><i class="md-timer"></i> <span>Statistics</span></a>
+                        <a href="pages/crud.html"><i class="md-edit"></i> <span>Crud</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="md-equalizer"></i> <span>Charts</span><i class="mdi-navigation-chevron-left arrow"></i></a>
@@ -102,38 +92,41 @@
         </div>
         <!-- /.sidebar-collapse -->
     </aside>
-
     <main>
+        <div class="edit-window shadow-z-2">
+            <button class="edit-window-close btn btn-fab btn-raised btn-material-red"><i class="md md-close"></i></button>
+            <div id="editor_holder"></div>
+        </div>
         <div class="nano">
             <div id="page-content" class="nano-content">
             </div>
         </div>
     </main>
-
-
     <!-- jQuery -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
     <!-- Metis Menu Plugin JavaScript -->
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
     <!-- Morris Charts JavaScript -->
     <script src="bower_components/raphael/raphael-min.js"></script>
     <script src="bower_components/morrisjs/morris.min.js"></script>
-
     <!-- Material design js files -->
     <script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
     <script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
-
     <!-- Nano scrollbars -->
     <script src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
-
+    <!-- SnackbarJS -->
+    <script type="text/javascript" src="bower_components/snackbarjs/dist/snackbar.min.js"></script>
+    <!-- Bootbox -->
+    <script type="text/javascript" src="bower_components/bootbox/bootbox.js"></script>
+    <!-- JsonEditor -->
+    <script type="text/javascript" src="bower_components/json-editor/dist/jsoneditor.min.js"></script>
+    <!-- Counter -->
+    <script type="text/javascript" src="javascripts/counter.js"></script>
     <!-- Own js file -->
     <script src="javascripts/main.js"></script>
-
+    <script type="text/javascript" src="javascripts/edit.js"></script>
 </body>
 
 </html>
