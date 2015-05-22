@@ -14,6 +14,9 @@ html, body {
 	width: 100%;
 	height: 5px;
 }
+.height-100 {
+  height: 100%;
+}
 nav {
 	z-index: 200;
 }
@@ -46,8 +49,11 @@ main {
 	overflow-x:hidden;
 	overflow-y:auto;
 }
-main .nano-content {
-	padding: 0 35px 15px;
+.container-padding {
+	padding: 0 35px;
+}
+.container-padding-half {
+  padding: 0 15px;
 }
 .page-header {
 	width: 100%;

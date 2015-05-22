@@ -1,0 +1,40 @@
+.slide {
+    height: 100%;
+    transition: all 1s cubic-bezier(.4,0,.2,1);
+    padding: 0 5px;
+    float:left;
+}
+.slide.wide {
+    width: 80%;
+}
+.slide:not(.wide) th:not(.crud-name), .slide:not(.wide) td:not(.crud-name) {
+    display:none;
+}
+.slide-content {
+    min-height: 100%;
+    min-width: 100%;
+    overflow:hidden;
+    padding: 0 5px;  
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+    position: relative;
+}
+.slide.wide .slide-content {
+    background: #f6f6f6;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.slide:not(.wide) .crud-add, .slide:not(.wide) .crud-delete-multi  {
+    display:none;
+}
+.slide-content .crud-add {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+.slide-content .crud-delete-multi {
+  position: absolute;
+  right: 106px;
+  top: 20px;    
+}
+.slide-content .crud-delete-multi.slide-hide {
+  top: -80px;
+}

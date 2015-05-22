@@ -1,14 +1,18 @@
 .edit-window {
-    min-width: 500px;
+    min-width: 300px;
+    max-width: 100%;
     width: 30%;
     height: 100%;
     position: fixed;
     z-index: 50;
-    margin-left: -100%;
+    margin-left: -130%;
     transition: all 1s cubic-bezier(.4,0,.2,1);
     opacity: .8;
     background: white;
     padding: 20px 35px;
+}
+.crud-table th, .crud-table td {
+    height: 46px;
 }
 thead {
     background-color: #009688;
