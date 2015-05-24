@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/edit.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/slides.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/table.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,6 +81,9 @@
                         <a href="pages/slides.html"><i class="md-assignment"></i> <span>Slides</span></a>
                     </li>
                     <li>
+                        <a href="pages/table.html"><i class="md-list"></i> <span>Inbox</span></a>
+                    </li>
+                    <li>
                         <a href="#"><i class="md-equalizer"></i> <span>Charts</span><i class="mdi-navigation-chevron-left arrow"></i></a>
                         <ul class="nav">
                             <li>
@@ -97,10 +101,6 @@
         <!-- /.sidebar-collapse -->
     </aside>
     <main>
-        <div class="edit-window shadow-z-2">
-            <button class="edit-window-close btn btn-fab btn-raised btn-material-red"><i class="md md-close"></i></button>
-            <div id="editor_holder"></div>
-        </div>
         <div class="nano">
             <div id="page-content" class="nano-content">
             </div>
@@ -131,7 +131,8 @@
     <!-- Own js file -->
     <script src="javascripts/main.js"></script>
     <script type="text/javascript" src="javascripts/slide.js"></script>
-    <script type="text/javascript" src="javascripts/edit.js"></script>
+    <script type="text/javascript" src="javascripts/crudify.js"></script>
+    <script type="text/javascript" src="javascripts/table.js"></script>
 </body>
 
 </html>

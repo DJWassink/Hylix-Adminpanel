@@ -23,6 +23,10 @@ thead {
     margin-left: 0px;
 }
 
+.crud-header-title {
+    text-transform: capitalize; 
+}
+
 .edit-window-close {
     position: absolute;
     left: 100%;

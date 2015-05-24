@@ -7,7 +7,7 @@
 .slide.wide {
     width: 80%;
 }
-.slide:not(.wide) th:not(.crud-name), .slide:not(.wide) td:not(.crud-name) {
+.slide:not(.wide) th:not(:nth-child(3)), .slide:not(.wide) td:not(:nth-child(3)) {
     display:none;
 }
 .slide-content {
