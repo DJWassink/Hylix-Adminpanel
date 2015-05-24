@@ -4,7 +4,6 @@ $(document).ready(function() {
      * close the table-rows on document click
      */
     $(document).on('click', '*:not(.expand-table-row)', function(e) {
-        e.stopPropagation();
         $('.expand-table-row').removeClass('wide');
     });
 
