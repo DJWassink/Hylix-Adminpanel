@@ -1,6 +1,3 @@
-.expand-table {
-}
-
 .expand-table-row {
     background:white;
     min-height: 48px;
@@ -13,6 +10,12 @@
 }
 .expand-table-row>.collapsed {
     padding: 0 10px;
+    cursor:pointer;
+}
+.expand-table-row>.collapsed:after {
+    clear:both;
+    display: table;
+  content: " ";
 }
 .expand-table-row>.collapsed>div {
     float:left;
@@ -44,6 +47,7 @@
     height: 60px;
     line-height: 60px;
     border-bottom: 1px solid #e5e5e5;
+    cursor:pointer;
 }
 .expanded-head>div {
     float:left;
